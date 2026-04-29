@@ -1,0 +1,78 @@
+<section class="container mx-auto px-4 py-12 fade-in">
+  <div class="flex items-center gap-4 mb-16">
+    <div class="shrink-0">
+      <h2 class="text-5xl font-black uppercase italic tracking-tighter leading-none">
+        / Contato
+      </h2>
+      <p class="font-mono text-xs font-bold mt-2 opacity-50 uppercase tracking-widest">
+        Inicie uma nova requisição
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div class="lg:col-span-5">
+      <h3 class="text-4xl font-black uppercase leading-none mb-6">
+        Vamos tirar o projeto <br />
+        <span class="bg-brandGreen px-2">do papel?</span>
+      </h3>
+      <p class="text-lg font-bold mb-8 opacity-80">
+        Seja para um freelance, uma proposta full-time ou apenas para trocar uma
+        ideia sobre arquitetura e SQL, sinta-se à vontade.
+      </p>
+
+      <div class="space-y-4 font-mono text-sm">
+        <a href="mailto:joao.victor@dev.com" class="flex items-center gap-3 group">
+          <span class="w-10 h-10 flex items-center justify-center bg-black text-white font-black group-hover:bg-brandGreen group-hover:text-black transition-colors border-2 border-black">@</span>
+          <span class="font-bold underline decoration-4 decoration-brandGreen">joao.victor@dev.com</span>
+        </a>
+        <a href="https://linkedin.com/in/codebydias" target="_blank" class="flex items-center gap-3 group">
+          <span class="w-10 h-10 flex items-center justify-center bg-brandYellow border-2 border-black font-black group-hover:bg-black group-hover:text-white transition-colors">IN</span>
+          <span class="font-bold underline decoration-4 decoration-brandYellow">/in/codebydias</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <form action="#" class="bg-white border-4 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] flex flex-col gap-6">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex flex-col gap-2">
+            <label class="font-mono text-xs font-black uppercase tracking-widest opacity-40">01. payload.nome</label>
+            <input type="text" placeholder="Seu nome" required
+              class="border-4 border-black p-3 font-bold focus:bg-white focus:border-brandGreen focus:outline-none transition-all placeholder:opacity-30 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-none focus:translate-x-1 focus:translate-y-1" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="font-mono text-xs font-black uppercase tracking-widest opacity-40">02. payload.email</label>
+            <input type="email" placeholder="email@exemplo.com" required
+              class="border-4 border-black p-3 font-bold focus:bg-white focus:border-brandGreen focus:outline-none transition-all placeholder:opacity-30 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-none focus:translate-x-1 focus:translate-y-1" />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="font-mono text-xs font-black uppercase tracking-widest opacity-40">03. header.assunto</label>
+          <div class="relative">
+            <select class="w-full border-4 border-black p-3 font-bold focus:outline-none appearance-none bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-none focus:translate-x-1 focus:translate-y-1 transition-all cursor-pointer">
+              <option>Desenvolvimento Fullstack</option>
+              <option>Consultoria Backend / SQL</option>
+              <option>Proposta Profissional</option>
+              <option>Outros</option>
+            </select>
+            <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none font-black font-mono">↓</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="font-mono text-xs font-black uppercase tracking-widest opacity-40">04. body.mensagem</label>
+          <textarea rows="4" placeholder="Descreva seu projeto ou ideia..." required
+            class="border-4 border-black p-3 font-bold focus:bg-white focus:border-brandGreen focus:outline-none transition-all resize-none placeholder:opacity-30 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-none focus:translate-x-1 focus:translate-y-1"></textarea>
+        </div>
+
+        <button type="submit"
+          class="bg-black text-white py-4 font-black uppercase text-xl border-4 border-black hover:bg-brandGreen hover:text-black hover:shadow-none shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-2 active:translate-y-2 transition-all">
+          Enviar Protocolo ->
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
