@@ -2,18 +2,55 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Victor | Portfólio</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <meta
+      name="description"
+      content="João Victor Dias | Fullstack Engineer focado em sistemas robustos, simplicidade e performance."
+    />
+    <meta property="og:title" content="João Victor | Portfólio" />
+    <meta
+      property="og:description"
+      content="Engenheiro Fullstack especializado em arquiteturas escaláveis."
+    />
+    <meta property="og:type" content="website" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,900;1,400&family=JetBrains+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Meu Portfólio</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            colors: {
+              brandYellow: "#ffff00",
+              brandGreen: "#00ff00",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <body>
-      <header id="header-slot"></header>
+  <body class="bg-white text-black flex flex-col min-h-screen">
+    <div class="noise-overlay"></div>
+    <header id="header-slot"></header>
 
-      <main id="view-slot"></main>
+    <main id="view-slot" class="flex-grow"></main>
 
-      <footer id="footer-slot"></footer>
+    <footer id="footer-slot"></footer>
 
-      <script type="module" src="js/script.js"></script>
-    </body>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>

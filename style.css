@@ -1,0 +1,71 @@
+@layer base {
+  body {
+    background-color: #ffffff;
+    /* Grid de pontos */
+    background-image: radial-gradient(#e5e7eb 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    /* Adicionado: melhora a renderização de fontes em telas de alta densidade */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Movido para fora do @layer base para garantir prioridade de z-index */
+  .noise-overlay {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.04; /* Aumentei levemente para ser perceptível em telas claras */
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Utilitários Neo-Brutalistas */
+.neo-border {
+  border: 4px solid #000;
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px #000;
+}
+
+.neo-shadow-lg {
+  box-shadow: 8px 8px 0px #000;
+}
+
+/* Botão: Adicionei o hover para trocar a cor, padrão que discutimos */
+.neo-button {
+  @apply neo-border neo-shadow px-6 py-2 font-black transition-all uppercase;
+  background: #fff;
+}
+
+.neo-button:hover {
+  @apply bg-brandYellow;
+}
+
+.neo-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+/* Animações: Limpei a duplicata e usei um easing mais "snappy" (rápido) */
+.fade-in {
+  animation: fadeIn 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Reduzi o deslocamento para ser mais sutil */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
