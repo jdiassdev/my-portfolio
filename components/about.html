@@ -83,12 +83,16 @@
         </div>
 
         <div class="p-6 font-mono text-[12px] md:text-[13px] leading-tight">
-          <div class="space-y-2">
+          <div class="space-y-1">
             <div class="flex gap-2">
               <span class="text-brandGreen font-bold">>>></span>
-              <span class="text-white"
-                >$about = User::developer()->aditionalInfoDesnecessaria();</span
-              >
+              <span class="text-white leading-relaxed">
+                User::developer()->where(<span class="text-brandYellow"
+                  >'slug'</span
+                >,
+                <span class="text-brandYellow">'jdiassdev'</span
+                >)->additionalInfoUnnecessary();
+              </span>
             </div>
 
             <div class="mt-4">

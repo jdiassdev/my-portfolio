@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     ui.load("footer-slot", "components/footer.html"),
   ]);
 
+  if (typeof lucide !== "undefined") {
+    lucide.createIcons();
+  }
+
   // rota inicial
   ui.navigate("home");
 

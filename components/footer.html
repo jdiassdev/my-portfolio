@@ -1,43 +1,131 @@
-<footer class="mt-auto bg-white border-t-4 border-black py-12">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-      <div class="text-center md:text-left">
-        <p class="text-lg font-black uppercase">© 2026 — João Victor Dias</p>
-        <p
-          class="font-mono text-[10px] font-bold opacity-50 uppercase tracking-widest mt-1"
+<footer class="mt-auto bg-white border-t-4 border-black font-mono">
+  <div class="container mx-auto px-0">
+    <div class="grid grid-cols-1 md:grid-cols-3">
+      <div class="p-6 border-b-4 md:border-b-0 md:border-r-4 border-black">
+        <h4
+          class="text-sm font-black uppercase mb-5 tracking-tighter opacity-50"
         >
-          "Simplicidade é o último grau da sofisticação." KISS & YAGNI: Menos
-          abstração, mais realidade.
-        </p>
+          Navegação
+        </h4>
+        <ul class="grid grid-cols-2 gap-y-3 text-xs font-bold uppercase">
+          <li>
+            <a
+              href="#"
+              data-link="projects"
+              class="hover:bg-brandGreen px-1 transition-all"
+              >- Projetos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              data-link="skills"
+              class="hover:bg-brandGreen px-1 transition-all"
+              >- Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              data-link="about"
+              class="hover:bg-brandGreen px-1 transition-all"
+              >- Sobre</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              data-link="contact"
+              class="hover:bg-brandGreen px-1 transition-all"
+              >- Contato</a
+            >
+          </li>
+        </ul>
       </div>
 
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <div class="flex gap-6 items-center">
+      <div class="p-6 border-b-4 md:border-b-0 md:border-r-4 border-black">
+        <h4
+          class="text-sm font-black uppercase mb-5 tracking-tighter opacity-50"
+        >
+          Social
+        </h4>
+        <div class="grid grid-cols-2 gap-4 text-xs font-bold uppercase">
           <a
             href="https://github.com/jdiassdev"
             target="_blank"
-            class="font-bold underline decoration-4 decoration-brandYellow underline-offset-4 hover:bg-brandYellow transition-colors"
-            >GitHub</a
+            class="flex items-center gap-2 group transition-colors hover:text-brandGreen"
           >
+            <i class="bx bxl-github text-xl"></i>
+            <span>GitHub</span>
+          </a>
+          <a
+            href="./seu-cv.pdf"
+            download
+            class="flex items-center gap-2 group transition-colors hover:text-brandGreen"
+          >
+            <i class="bx bx-file text-xl"></i>
+            <span>CV.pdf</span>
+          </a>
           <a
             href="https://linkedin.com/in/codebydias"
             target="_blank"
-            class="font-bold underline decoration-4 decoration-brandYellow underline-offset-4 hover:bg-brandYellow transition-colors"
-            >LinkedIn</a
+            class="flex items-center gap-2 group transition-colors hover:text-brandGreen"
           >
+            <i class="bx bxl-linkedin-square text-xl"></i>
+            <span>Linkedin</span>
+          </a>
           <a
-            href="mailto:seuemail@exemplo.com"
-            class="font-mono text-xs font-black hover:text-brandGreen transition-colors"
-            >E-mail</a
+            href="mailto:jdiassdev@gmail.com"
+            class="flex items-center gap-2 group transition-colors hover:text-brandGreen"
           >
+            <i class="bx bx-envelope text-xl"></i>
+            <span>Email</span>
+          </a>
         </div>
-
-        <!-- <span
-          class="bg-brandGreen border-2 border-black px-4 py-1 font-black text-xs uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] select-none"
-        >
-          Status: Open to Work
-        </span> -->
       </div>
+
+      <div class="p-6 flex flex-col justify-start">
+        <h4
+          class="text-sm font-black uppercase mb-5 tracking-tighter opacity-50"
+        >
+          Contato
+        </h4>
+        <div class="flex flex-col gap-y-3 text-xs uppercase font-bold">
+          <div
+            class="flex items-center justify-between border-b border-black/10 pb-1"
+          >
+            <span class="opacity-50 font-medium">Wpp</span>
+            <a
+              href="https://wa.me/55919XXXXXXX"
+              target="_blank"
+              class="hover:text-brandGreen transition-colors"
+              >+55 91 9XXXX-XXXX</a
+            >
+          </div>
+
+          <div
+            class="flex items-center justify-between border-b border-black/10 pb-1"
+          >
+            <span class="opacity-50 font-medium">Email</span>
+            <span class="lowercase">jdiassdev@gmail.com</span>
+          </div>
+          <div class="flex items-center justify-between pb-1">
+            <span class="opacity-50 font-medium">Local</span>
+            <span>Belém, PA - BR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="border-t-4 border-black py-4 px-6 flex flex-col md:flex-row justify-between items-center bg-white"
+    >
+      <p class="text-[11px] font-black uppercase tracking-[0.2em]">
+        João Victor T. Dias // 2026
+      </p>
+      <p class="text-[10px] font-bold uppercase mt-2 md:mt-0 opacity-60">
+        Simplicidade é o último grau da sofisticação
+      </p>
     </div>
   </div>
 </footer>
