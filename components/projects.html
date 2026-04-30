@@ -16,49 +16,47 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
     <div
-      class="group border-4 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 flex flex-col"
+      class="group border-4 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_var(--brand-yellow)] transition-all duration-300 flex flex-col"
     >
       <div class="flex justify-between items-start mb-6">
         <h3 class="text-2xl font-black uppercase leading-none">Casa Amarela</h3>
         <span
-          class="bg-black text-white px-3 py-1 text-[9px] font-black uppercase tracking-[0.2em]"
+          class="bg-black text-white px-3 py-1 text-[9px] font-black uppercase tracking-widest border-2 border-black"
           >Commercial</span
         >
       </div>
 
       <p class="font-bold text-sm mb-8 opacity-80 flex-grow leading-relaxed">
         Plataforma de reservas real-time. Foco em
-        <span class="underline decoration-brandYellow"
-          >performance de carregamento</span
-        >
+        <span class="bg-brandYellow/30 px-1">performance de carregamento</span>
         e simplicidade na gestão de datas.
       </p>
 
       <div class="flex flex-wrap gap-2 mb-8">
         <span
-          class="border-2 border-black px-2 py-0.5 font-mono text-[9px] font-black uppercase"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
           >Next.js 15</span
         >
         <span
-          class="border-2 border-black px-2 py-0.5 font-mono text-[9px] font-black uppercase"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
           >Prisma</span
         >
         <span
-          class="border-2 border-black px-2 py-0.5 font-mono text-[9px] font-black uppercase"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
           >PostgreSQL</span
         >
       </div>
 
       <a
         href="#"
-        class="w-full text-center border-4 border-black py-3 font-black uppercase text-xs shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:bg-black hover:text-white transition-all"
+        class="w-full text-center border-4 border-black py-3 font-black uppercase text-xs shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:bg-brandYellow transition-all active:translate-x-1 active:translate-y-1"
       >
         Explorar Case ->
       </a>
     </div>
 
     <div
-      class="group border-4 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,255,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,255,0,1)] transition-all duration-300 flex flex-col hover:border-brandGreen"
+      class="group border-4 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_var(--brand-green)] transition-all duration-300 flex flex-col"
     >
       <div class="flex justify-between items-start mb-6">
         <h3
@@ -67,47 +65,42 @@
           ThatsMyTypes
         </h3>
         <span
-          class="bg-brandGreen border-2 border-black text-black px-3 py-1 text-[10px] font-black uppercase tracking-widest select-none"
+          class="bg-brandGreen border-2 border-black text-black px-3 py-1 text-[9px] font-black uppercase tracking-widest"
+          >Open Source</span
         >
-          Open Source
-        </span>
       </div>
-      <p
-        class="font-bold text-base mb-8 opacity-80 flex-grow group-hover:text-black/90"
-      >
+
+      <p class="font-bold text-sm mb-8 opacity-80 flex-grow leading-relaxed">
         Biblioteca para sincronizar FormRequests Laravel com interfaces
-        TypeScript automaticamente.
+        TypeScript automaticamente via CLI.
       </p>
 
-      <div class="flex flex-wrap gap-2.5 mb-8 font-mono text-[10px]">
+      <div class="flex flex-wrap gap-2 mb-8">
         <span
-          class="bg-brandGreen border-2 border-black text-black px-2.5 py-1 font-black uppercase tracking-tighter shadow-[2px_2px_0px_0px_rgba(0,255,0,1)]"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
+          >PHP 8.2</span
         >
-          PHP 8.2
-        </span>
         <span
-          class="bg-brandGreen border-2 border-black text-black px-2.5 py-1 font-black uppercase tracking-tighter shadow-[2px_2px_0px_0px_rgba(0,255,0,1)]"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
+          >Laravel</span
         >
-          Laravel
-        </span>
         <span
-          class="bg-brandGreen border-2 border-black text-black px-2.5 py-1 font-black uppercase tracking-tighter shadow-[2px_2px_0px_0px_rgba(0,255,0,1)]"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
+          >TS</span
         >
-          TS
-        </span>
       </div>
 
       <a
         href="https://github.com/jdiassdev"
         target="_blank"
-        class="w-full text-center border-2 border-black py-3 font-black uppercase text-sm transition-all group-hover:bg-brandGreen group-hover:text-black"
+        class="w-full text-center border-4 border-black py-3 font-black uppercase text-xs shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:bg-brandGreen transition-all active:translate-x-1 active:translate-y-1"
       >
         Ver no GitHub ->
       </a>
     </div>
 
     <div
-      class="group border-4 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(255,255,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(255,255,0,1)] transition-all duration-300 flex flex-col hover:border-brandYellow"
+      class="group border-4 border-black p-8 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_var(--brand-yellow)] transition-all duration-300 flex flex-col"
     >
       <div class="flex justify-between items-start mb-6">
         <h3
@@ -116,38 +109,35 @@
           Gentleman API
         </h3>
         <span
-          class="bg-brandYellow border-2 border-black text-black px-3 py-1 text-[10px] font-black uppercase tracking-widest select-none"
+          class="bg-brandYellow border-2 border-black text-black px-3 py-1 text-[9px] font-black uppercase tracking-widest"
+          >Backend</span
         >
-          Backend
-        </span>
       </div>
-      <p
-        class="font-bold text-base mb-8 opacity-80 flex-grow group-hover:text-black/90"
-      >
-        API RESTful para barbearias utilizando ULIDs e ambiente Dockerizado.
+
+      <p class="font-bold text-sm mb-8 opacity-80 flex-grow leading-relaxed">
+        API RESTful para gestão de barbearias utilizando
+        <span class="underline decoration-black decoration-2">ULIDs</span> e
+        ambiente Dockerizado.
       </p>
 
-      <div class="flex flex-wrap gap-2.5 mb-8 font-mono text-[10px]">
+      <div class="flex flex-wrap gap-2 mb-8">
         <span
-          class="bg-brandYellow border-2 border-black text-black px-2.5 py-1 font-black uppercase tracking-tighter shadow-[2px_2px_0px_0px_rgba(255,255,0,1)]"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
+          >Laravel</span
         >
-          Laravel
-        </span>
         <span
-          class="bg-brandYellow border-2 border-black text-black px-2.5 py-1 font-black uppercase tracking-tighter shadow-[2px_2px_0px_0px_rgba(255,255,0,1)]"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
+          >Docker</span
         >
-          Docker
-        </span>
         <span
-          class="bg-brandYellow border-2 border-black text-black px-2.5 py-1 font-black uppercase tracking-tighter shadow-[2px_2px_0px_0px_rgba(255,255,0,1)]"
+          class="border-2 border-black px-2 py-0.5 font-mono text-[10px] font-black uppercase bg-gray-50"
+          >MySQL</span
         >
-          ULID
-        </span>
       </div>
 
       <a
         href="#"
-        class="w-full text-center border-2 border-black py-3 font-black uppercase text-sm transition-all group-hover:bg-brandYellow group-hover:text-black"
+        class="w-full text-center border-4 border-black py-3 font-black uppercase text-xs shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:bg-brandYellow transition-all active:translate-x-1 active:translate-y-1"
       >
         Explorar Docs ->
       </a>

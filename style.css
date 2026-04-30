@@ -4,88 +4,87 @@
 
 @layer base {
   :root {
-    --brand-green: #00ff00; /* Verde puro para o terminal/detalhes */
-    --brand-yellow: #facc15; /* Amarelo Neo-Brutalista clássico */
+    --brand-green: #00ff00;
+    --brand-yellow: #facc15;
+    --brand-black: #000000;
   }
 
   body {
-    background-color: #ffffff;
-    /* Grid de pontos: Essencial para o estilo técnico */
+    @apply bg-white text-black overflow-x-hidden antialiased;
+    /* Grid de pontos técnico */
     background-image: radial-gradient(#e5e7eb 1.5px, transparent 1.5px);
     background-size: 24px 24px;
     background-attachment: fixed;
     font-family: "Inter", sans-serif;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
   }
 
-  /* Seleção de texto personalizada */
+  /* Seleção de texto estilo Terminal */
   ::selection {
     background-color: var(--brand-green);
     color: #000;
   }
 
+  /* Overlay de ruído para textura de papel/monitor antigo */
   .noise-overlay {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.04;
-    pointer-events: none;
-    z-index: 9999;
+    @apply fixed top-0 left-0 w-full h-full pointer-events-none z-[9999] opacity-[0.04];
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 }
 
-/* Utilitários Customizados */
 @layer components {
+  /* Elevando o padrão das bordas e sombras */
   .neo-border {
-    border: 4px solid #000;
+    @apply border-[4px] border-black;
   }
 
   .neo-shadow {
-    box-shadow: 4px 4px 0px #000;
+    box-shadow: 4px 4px 0px 0px #000;
   }
 
   .neo-shadow-lg {
-    box-shadow: 12px 12px 0px #000;
+    box-shadow: 12px 12px 0px 0px #000;
   }
 
-  /* Efeito do Terminal com Brilho Verde */
   .terminal-shadow {
     box-shadow: 12px 12px 0px 0px var(--brand-green);
   }
 
-  /* Scrollbar Estilo Terminal */
+  /* Botão com efeito de clique real (pressionando a sombra) */
+  .neo-button {
+    @apply neo-border neo-shadow bg-white px-6 py-3 font-black uppercase transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none hover:bg-brand-yellow;
+  }
+
+  /* Underline Brutalista (Substitui o link-button azul) */
+  .link-neo {
+    @apply relative inline-block font-bold transition-colors hover:text-brand-green;
+  }
+
+  .link-neo::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-[3px] bg-black scale-x-100 transition-transform origin-left;
+  }
+
+  .link-neo:hover::after {
+    @apply bg-brand-green;
+  }
+
+  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 10px;
   }
-
   ::-webkit-scrollbar-track {
-    background: #fff;
-    border-left: 4px solid #000;
+    @apply bg-white border-l-4 border-black;
   }
-
   ::-webkit-scrollbar-thumb {
-    background: #000;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--brand-green);
+    @apply bg-black hover:bg-brand-green;
   }
 }
 
-/* Animações Snappy */
-.fade-in {
-  animation: fadeIn 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-}
-
-@keyframes fadeIn {
+/* Animações Snappy (Entrada suave mas técnica) */
+@keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -93,11 +92,17 @@
   }
 }
 
-.animate-pulse {
-  animation: pulse 1s steps(2, start) infinite;
+.fade-in {
+  animation: slideUp 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
-@keyframes pulse {
+/* Cursor do Terminal */
+.terminal-cursor {
+  @apply inline-block w-2 h-5 bg-brand-green align-middle;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
   0%,
   100% {
     opacity: 1;
